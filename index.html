@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style.css">
+    <!-- <script src="https://unpkg.com/read-excel-file@5.x/bundle/read-excel-file.min.js"></script> -->
+    <script src="/assets/js/read-excel-file.min.js"></script>
+    <title>Excel</title>
+</head>
+<body>
+    <h1>Leer datos de un excel</h1>
+
+    <article class="select-excel-file" id="select-excel-file">
+        <label>
+            <input type="file" name="excel-file" id="excel-file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" hidden>
+            <span>Seleccionar archivo</span>
+        </label>
+        <button type="button" id="load-document" disabled>Cargar</button>
+    </article>
+
+
+
+    <table id="excel-table">
+        <thead>
+            <tr></tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+
+    <script src="/assets/js/main.js" type="module"></script>
+</body>
+</html>
