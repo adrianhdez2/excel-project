@@ -2,48 +2,48 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/style.css">
-    <!-- Archivo en nube -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>  -->
-
-    <!-- Archivo en local -->
-    <script src="/assets/js/xlsx.full.min.js"></script>
-    <title>Excel</title>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/assets/img/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excel</title>
 </head>
 
 <body>
-    <h1>Leer datos de un excel</h1>
 
-    <article class="select-excel-file" id="select-excel-file">
-        <label>
-            <input type="file" name="excel-file" id="excel-file"
-                accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
-                hidden>
-            <span>Seleccionar archivo</span>
-        </label>
-        <button type="button" id="load-document" disabled>Cargar</button>
+  <body class="flex items-center justify-center flex-col py-8">
+    <h1 class="mb-5 font-bold">Leer datos de un excel</h1>
+
+    <article class="select-excel-file w-[500px] h-10 flex items-center justify-center text-black font-normal mb-2.5"
+      id="select-excel-file">
+      <label
+        class="w-[400px] h-full flex items-center justify-center text-center text-base cursor-pointer transition-colors border border-solid border-[#00000044] rounded-tl-md rounded-bl-md hover:bg-[#00000023]">
+        <input type="file" name="excel-file" id="excel-file"
+          accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+          hidden>
+        <span>Seleccionar archivo</span>
+      </label>
+      <button type="button" id="load-document" class="w-[100px] h-full flex items-center justify-center text-center cursor-pointer text-white bg-[#0f0f0fc9] border-none outline-none rounded-tr-md rounded-br-md transition-all hover:bg-[#0f0f0fe5] active:bg-[#0f0f0fe5] disabled:bg-[#0000005d] disabled:cursor-not-allowed" disabled>Cargar</button>
     </article>
 
-    <article class="select-excel-sheets">
-        <label for="sheet-select">
-            Seleccionar hoja de trabajo:
-            <select id="sheet-select"></select>
-        </label>
+    <article class="select-excel-sheets hidden items-center justify-center text-sm">
+      <label for="sheet-select">
+        Seleccionar hoja de trabajo:
+        <select id="sheet-select" class="inline-block px-3 py-0.5 border border-solid border-[#8080802f] rounded-md outline-none cursor-pointer active:border-[#0f0f0fe5] focus:border-[#0f0f0fe5]"></select>
+      </label>
     </article>
 
 
-    <table id="excel-table">
-        <thead>
-            <tr></tr>
-        </thead>
-        <tbody>
+    <table id="excel-table" class="w-full max-w-[1300px] border-collapse mt-10 text-sm mx-auto">
+      <thead>
+        <tr></tr>
+      </thead>
+      <tbody>
 
-        </tbody>
+      </tbody>
     </table>
 
-    <script src="/assets/js/main.js" type="module"></script>
+  </body>
+  <script type="module" src="./src/main.js"></script>
 </body>
 
 </html>
